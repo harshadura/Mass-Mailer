@@ -1,0 +1,74 @@
+############################################
+
+	MassMailer 	v1.5
+  
+############################################
+
+@author : harshadura
+@email	: harshadura@gmail.com
+
+---------------------------
+Required Software
+---------------------------
+
+(01)    Java 1.6
+(02)    Apache Maven 2.2.1
+(03)    Mysql Server 5.1
+
+-----------------------------------------------------
+Configure Massmailer Propertiesfile before Usage.
+-----------------------------------------------------
+
+>   Copying the "bulk.properties" file into required Destination.
+	> for Windows : Copy "bulk.properties" file into C:\bulk.properties
+	> for Linux   : Copy "bulk.properties" file into /home/bulk.properties 
+
+>   Configure the properties in "bulk.properties" file as Necessary
+
+Sample : 
+db.name=massmailer
+db.user=root
+db.pass=PASS
+
+smtp.host=smtp.gmail.com
+smtp.port=587
+smtp.user=TEST@gmail.com
+smtp.pass=PASS
+ 
+---------------------------
+Running MassMailer
+---------------------------
+
+>   start mysql server
+
+>   source the database schema. (dbqueries.sql)
+        mysql> source <path>/dbqueries.sql
+
+>   Using command line, goto the Inside of MassMailer project folder.
+
+>   type
+        mvn clean install
+
+>   MassMailer.Jar can be found in <project>/target directory.
+
+---------------------------
+Notes - Usage
+---------------------------
+
+>   MassMailer uses MySql Tables to Recognize the Email Categories.
+>   So Insert All the same grouped Emails into one MySql Table.
+>   After that when using the MassMailer give the Relevant "TABLE NAME" for the "Bulk" Field.
+
+-------------------------------------------
+Troubleshoot
+-------------------------------------------
+If an error occured like this "Java.lang.ClassNotFoundException:"
+Copy the All JARs files into below folders and Restart the Application.
+
+Linux
+----- 
+\jre\lib
+\jre\lib\ext
+
+
+
