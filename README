@@ -1,7 +1,10 @@
 ############################################
 
 	MassMailer 	v1.5
-  
+
+Simple Java email client, 
+     Specially designed to send bulk emails.
+
 ############################################
 
 @author : harshadura
